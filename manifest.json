@@ -1,0 +1,17 @@
+{
+    "name": "Chrome screenshots",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "background": {"service_worker": "background.js"},
+    "permissions": ["activeTab", "debugger", "scripting", "storage"],
+    "options_page": "options.html",
+    "icons": {
+        "512": "icon-512.png",
+        "256": "icon-256.png",
+        "128": "icon-128.png",
+        "64": "icon-64.png",
+        "48": "icon-48.png",
+        "16": "icon-16.png"
+    },
+    "action": {"default_popup": "popup.html"}
+}

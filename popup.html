@@ -1,0 +1,36 @@
+<button id="capture">Capture page</button>
+<div id="status"></div>
+<script src="popup.js"></script>
+<style>
+    button {
+        margin: 5px;
+        padding: 8px 20px;
+        width: 60vw;
+        border: 2px solid #0002;
+        border-radius: 4px;
+        cursor: pointer;
+        background: #0001;
+        transition: background .2s ease;
+    }
+    button:hover {
+        background: #0000;
+    }
+    button:disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        flex-direction: column;
+        padding: 20px;
+    }
+    #status {
+        color: #666;
+        font-weight: 300;
+        font-size: 14px;
+        display: none;
+    }
+</style>

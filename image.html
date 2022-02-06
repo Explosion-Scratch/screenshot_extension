@@ -1,0 +1,97 @@
+<!--
+<link rel="stylesheet" href="libsForImagePage/ui.css">
+<link rel="stylesheet" href="libsForImagePage/noto_sans.css">
+
+<div id="image_editor" style="height: 100vh; width: 100vw;"><canvas></canvas></div>
+
+<script src="libsForImagePage/fabric.js"></script>
+<script src="libsForImagePage/code_snippet.js"></script>
+<script src="libsForImagePage/color_picker.js"></script>
+<script src="libsForImagePage/file_saver.js"></script>
+<script src="libsForImagePage/image_editor.js"></script>
+-->
+<title>Screenshot</title>
+<h1>Captured screenshot</h1>
+<span>Scroll on the image to view full screenshot</span>
+<div id="img_container">
+
+</div>
+<button class="save">Save</button>
+
+<script src="image.js"></script>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    *:focus {
+        outline: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+    h2 {
+        margin: 10px;
+    }
+    span {
+        margin-bottom: 20px;
+    }
+    span {
+        font-weight: 300;
+        color: #666;
+        font-size: 15px;
+        font-style: italic;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #img_container {
+        width: fit-content;
+        height: fit-content;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        max-height: 70vh;
+        max-width: 600px;
+        overflow-y: scroll;
+    }
+    #img {
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        object-position: top;
+    }
+    button {
+        padding: 8px 20px;
+        margin: 20px;
+        width: 60vw;
+        max-width: 600px;
+        border: 2px solid #0002;
+        border-radius: 4px;
+        cursor: pointer;
+        background: #0001;
+        transition: background .2s ease;
+    }
+    button:hover {
+        background: #0000;
+    }
+
+    /* ===== Scrollbar CSS ===== *//* Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #54a09f #ffffff;
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #54a09f;
+        border-radius: 13px;
+    }
+</style>
