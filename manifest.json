@@ -1,9 +1,10 @@
 {
-    "name": "Chrome screenshots",
-    "version": "0.0.1",
+    "name": "Full page screen capture",
+    "version": "1.0.0",
+    "description": "Captures full page, high resolution screenshots without scrolling or glitches. Up to 4x normal screen resolution.",
     "manifest_version": 3,
     "background": {"service_worker": "background.js"},
-    "permissions": ["activeTab", "debugger", "scripting", "storage"],
+    "permissions": ["activeTab", "debugger", "storage"],
     "options_page": "options.html",
     "icons": {
         "512": "icon-512.png",
