@@ -17,7 +17,7 @@ let storage = {
 }
 
 ;(async () => {
-    options = await storage.get("settings");
+    options = {...options, ...await storage.get("settings")};
 })();
 
 let DATA;
