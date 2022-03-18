@@ -1,6 +1,6 @@
 let options = {
     FORMAT: "png",
-    SCALE_FACTOR: 1,
+    SCALE_FACTOR: 1.5,
     JPEG_QUALITY: 100,
 }
 let storage = {
@@ -18,6 +18,7 @@ let storage = {
 
 ;(async () => {
     options = {...options, ...await storage.get("settings")};
+    console.log(options);
 })();
 
 let DATA;
@@ -25,7 +26,7 @@ let DATA;
 chrome.runtime.onMessage.addListener(async (msg, _, respond) => {
     console.log(msg);
     if (msg.type === "capture"){
-        options = await storage.get("settings");
+        options = {...options, ...await storage.get("settings")};
         let [tab] = await chrome.tabs.query({active: true, currentWindow: true});
         capture(tab);
         respond();
